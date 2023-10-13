@@ -58,20 +58,16 @@
     data() {
       return {
         user : {
-          name: '',
           email: '',
           password: '',
-          mobile: ''
         }
       }
     },
     validations() {
       return {
         user: {
-          name: { required },
           email: { email, required },
           password: { required, minLength: minLength(6) },
-          mobile: { required, minLength: minLength(10) }
         }
       }
     },
@@ -86,7 +82,7 @@
     //   formatMobileNumber (phone) {
     //     this.user.mobile = formatPhoneNumber(phone)
     //   },
-      onSubmit: function() {
+      onSubmit() {
         this.v$.$touch()
         if (this.v$.$error) return
         this.userLogin(this.user)
