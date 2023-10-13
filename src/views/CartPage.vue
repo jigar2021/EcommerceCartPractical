@@ -3,7 +3,7 @@
   <div class="container">
     <span v-on:keydown="key">{{message}}</span>
     <span class="d-flex mb-3 mt-2">
-      <router-link to="/">
+      <router-link to="/home">
         <span class="material-symbols-outlined"> arrow_back </span> Back To
         Shopping
       </router-link>
